@@ -1,0 +1,503 @@
+{
+  "ORD1001": {
+    "customer_name": "Aarav Sharma",
+    "order_date": "2026-05-18",
+    "amount": 2499,
+    "payment": {
+      "status": "Success",
+      "method": "Credit Card",
+      "transaction_id": "TXN1001",
+      "error_code": null
+    },
+    "shipping": {
+      "order_status": "Delivered",
+      "tracking_number": "TRK9001001",
+      "estimated_delivery": "2026-05-23",
+      "delivery_date": "2026-05-22"
+    },
+    "refund": {
+      "status": "Not Requested",
+      "reason": null,
+      "eligible": true
+    }
+  },
+
+  "ORD1002": {
+    "customer_name": "Priya Verma",
+    "order_date": "2026-05-19",
+    "amount": 1599,
+    "payment": {
+      "status": "Success",
+      "method": "UPI",
+      "transaction_id": "TXN1002",
+      "error_code": null
+    },
+    "shipping": {
+      "order_status": "Shipped",
+      "tracking_number": "TRK9001002",
+      "estimated_delivery": "2026-05-25",
+      "delivery_date": null
+    },
+    "refund": {
+      "status": "Not Requested",
+      "reason": null,
+      "eligible": true
+    }
+  },
+
+  "ORD1003": {
+    "customer_name": "Rohan Gupta",
+    "order_date": "2026-05-20",
+    "amount": 3299,
+    "payment": {
+      "status": "Failed",
+      "method": "Debit Card",
+      "transaction_id": null,
+      "error_code": "PAY-203"
+    },
+    "shipping": {
+      "order_status": "Processing",
+      "tracking_number": null,
+      "estimated_delivery": null,
+      "delivery_date": null
+    },
+    "refund": {
+      "status": "Not Requested",
+      "reason": null,
+      "eligible": false
+    }
+  },
+
+  "ORD1004": {
+    "customer_name": "Neha Singh",
+    "order_date": "2026-05-21",
+    "amount": 2199,
+    "payment": {
+      "status": "Success",
+      "method": "Wallet",
+      "transaction_id": "TXN1004",
+      "error_code": null
+    },
+    "shipping": {
+      "order_status": "Delivered",
+      "tracking_number": "TRK9001004",
+      "estimated_delivery": "2026-05-27",
+      "delivery_date": "2026-05-26"
+    },
+    "refund": {
+      "status": "Requested",
+      "reason": "Received damaged item",
+      "eligible": true
+    }
+  },
+
+  "ORD1005": {
+    "customer_name": "Karan Mehta",
+    "order_date": "2026-05-22",
+    "amount": 4599,
+    "payment": {
+      "status": "Success",
+      "method": "Net Banking",
+      "transaction_id": "TXN1005",
+      "error_code": null
+    },
+    "shipping": {
+      "order_status": "Delivered",
+      "tracking_number": "TRK9001005",
+      "estimated_delivery": "2026-05-29",
+      "delivery_date": "2026-05-28"
+    },
+    "refund": {
+      "status": "Approved",
+      "reason": "Wrong item delivered",
+      "eligible": true
+    }
+  },
+
+  "ORD1006": {
+    "customer_name": "Ananya Joshi",
+    "order_date": "2026-05-23",
+    "amount": 1799,
+    "payment": {
+      "status": "Success",
+      "method": "UPI",
+      "transaction_id": "TXN1006",
+      "error_code": null
+    },
+    "shipping": {
+      "order_status": "Delivered",
+      "tracking_number": "TRK9001006",
+      "estimated_delivery": "2026-05-30",
+      "delivery_date": "2026-05-29"
+    },
+    "refund": {
+      "status": "Rejected",
+      "reason": "Return window expired",
+      "eligible": false
+    }
+  },
+
+  "ORD1007": {
+    "customer_name": "Vikram Rana",
+    "order_date": "2026-05-24",
+    "amount": 999,
+
+    "payment": {
+      "status": "Success",
+      "method": "Credit Card",
+      "transaction_id": "TXN1007",
+      "error_code": null
+    },
+
+    "shipping": {
+      "order_status": "Delivered",
+      "tracking_number": "TRK9001007",
+      "estimated_delivery": "2026-05-31",
+      "delivery_date": "2026-05-30"
+    },
+
+    "refund": {
+      "status": "Completed",
+      "reason": "Product not as described",
+      "eligible": false
+    }
+  },
+
+  "ORD1008": {
+    "customer_name": "Simran Kaur",
+    "order_date": "2026-05-25",
+    "amount": 2899,
+
+    "payment": {
+      "status": "Success",
+      "method": "Debit Card",
+      "transaction_id": "TXN1008",
+      "error_code": null
+    },
+
+    "shipping": {
+      "order_status": "Cancelled",
+      "tracking_number": null,
+      "estimated_delivery": null,
+      "delivery_date": null
+    },
+
+    "refund": {
+      "status": "Not Requested",
+      "reason": "Cancelled by customer",
+      "eligible": false
+    }
+  },
+
+  "ORD1009": {
+    "customer_name": "Aditya Rao",
+    "order_date": "2026-05-26",
+    "amount": 3499,
+
+    "payment": {
+      "status": "Success",
+      "method": "UPI",
+      "transaction_id": "TXN1009",
+      "error_code": null
+    },
+
+    "shipping": {
+      "order_status": "Shipped",
+      "tracking_number": "TRK9001009",
+      "estimated_delivery": "2026-06-02",
+      "delivery_date": null
+    },
+
+    "refund": {
+      "status": "Not Requested",
+      "reason": null,
+      "eligible": true
+    }
+  },
+
+  "ORD1010": {
+    "customer_name": "Meera Iyer",
+    "order_date": "2026-05-27",
+    "amount": 1199,
+
+    "payment": {
+      "status": "Success",
+      "method": "Wallet",
+      "transaction_id": "TXN1010",
+      "error_code": null
+    },
+
+    "shipping": {
+      "order_status": "Processing",
+      "tracking_number": null,
+      "estimated_delivery": "2026-06-04",
+      "delivery_date": null
+    },
+
+    "refund": {
+      "status": "Not Requested",
+      "reason": null,
+      "eligible": true
+    }
+  },
+
+  "ORD1011": {
+    "customer_name": "Harsh Patel",
+    "order_date": "2026-05-27",
+    "amount": 5699,
+
+    "payment": {
+      "status": "Failed",
+      "method": "Credit Card",
+      "transaction_id": null,
+      "error_code": "PAY-101"
+    },
+
+    "shipping": {
+      "order_status": "Processing",
+      "tracking_number": null,
+      "estimated_delivery": null,
+      "delivery_date": null
+    },
+
+    "refund": {
+      "status": "Not Requested",
+      "reason": null,
+      "eligible": false
+    }
+  },
+
+  "ORD1012": {
+    "customer_name": "Sanya Kapoor",
+    "order_date": "2026-05-28",
+    "amount": 2499,
+
+    "payment": {
+      "status": "Success",
+      "method": "Net Banking",
+      "transaction_id": "TXN1012",
+      "error_code": null
+    },
+
+    "shipping": {
+      "order_status": "Delivered",
+      "tracking_number": "TRK9001012",
+      "estimated_delivery": "2026-06-03",
+      "delivery_date": "2026-06-02"
+    },
+
+    "refund": {
+      "status": "Not Requested",
+      "reason": null,
+      "eligible": true
+    }
+  },
+
+  "ORD1013": {
+    "customer_name": "Nikhil Bansal",
+    "order_date": "2026-05-29",
+    "amount": 1799,
+
+    "payment": {
+      "status": "Success",
+      "method": "UPI",
+      "transaction_id": "TXN1013",
+      "error_code": null
+    },
+
+    "shipping": {
+      "order_status": "Cancelled",
+      "tracking_number": null,
+      "estimated_delivery": null,
+      "delivery_date": null
+    },
+
+    "refund": {
+      "status": "Not Requested",
+      "reason": "Customer cancelled before shipment",
+      "eligible": false
+    }
+  },
+
+  "ORD1014": {
+    "customer_name": "Kavya Nair",
+    "order_date": "2026-05-29",
+    "amount": 3099,
+
+    "payment": {
+      "status": "Success",
+      "method": "Debit Card",
+      "transaction_id": "TXN1014",
+      "error_code": null
+    },
+
+    "shipping": {
+      "order_status": "Shipped",
+      "tracking_number": "TRK9001014",
+      "estimated_delivery": "2026-06-05",
+      "delivery_date": null
+    },
+
+    "refund": {
+      "status": "Not Requested",
+      "reason": null,
+      "eligible": true
+    }
+  },
+
+  "ORD1015": {
+    "customer_name": "Dev Malhotra",
+    "order_date": "2026-05-30",
+    "amount": 6499,
+
+    "payment": {
+      "status": "Success",
+      "method": "Credit Card",
+      "transaction_id": "TXN1015",
+      "error_code": null
+    },
+
+    "shipping": {
+      "order_status": "Delivered",
+      "tracking_number": "TRK9001015",
+      "estimated_delivery": "2026-06-06",
+      "delivery_date": "2026-06-05"
+    },
+
+    "refund": {
+      "status": "Requested",
+      "reason": "Received defective product",
+      "eligible": true
+    }
+  },
+
+  "ORD1016": {
+    "customer_name": "Isha Khanna",
+    "order_date": "2026-05-31",
+    "amount": 1399,
+
+    "payment": {
+      "status": "Success",
+      "method": "Wallet",
+      "transaction_id": "TXN1016",
+      "error_code": null
+    },
+
+    "shipping": {
+      "order_status": "Delivered",
+      "tracking_number": "TRK9001016",
+      "estimated_delivery": "2026-06-06",
+      "delivery_date": "2026-06-06"
+    },
+
+    "refund": {
+      "status": "Approved",
+      "reason": "Missing accessories",
+      "eligible": true
+    }
+  },
+
+  "ORD1017": {
+    "customer_name": "Rahul Khanna",
+    "order_date": "2026-05-31",
+    "amount": 899,
+
+    "payment": {
+      "status": "Failed",
+      "method": "UPI",
+      "transaction_id": null,
+      "error_code": "PAY-203"
+    },
+
+    "shipping": {
+      "order_status": "Cancelled",
+      "tracking_number": null,
+      "estimated_delivery": null,
+      "delivery_date": null
+    },
+
+    "refund": {
+      "status": "Not Requested",
+      "reason": null,
+      "eligible": false
+    }
+  },
+
+  "ORD1018": {
+    "customer_name": "Pooja Sharma",
+    "order_date": "2026-06-01",
+    "amount": 2799,
+
+    "payment": {
+      "status": "Success",
+      "method": "Net Banking",
+      "transaction_id": "TXN1018",
+      "error_code": null
+    },
+
+    "shipping": {
+      "order_status": "Delivered",
+      "tracking_number": "TRK9001018",
+      "estimated_delivery": "2026-06-07",
+      "delivery_date": "2026-06-06"
+    },
+
+    "refund": {
+      "status": "Rejected",
+      "reason": "Product used and return policy violated",
+      "eligible": false
+    }
+  },
+
+  "ORD1019": {
+    "customer_name": "Siddharth Jain",
+    "order_date": "2026-06-01",
+    "amount": 4299,
+
+    "payment": {
+      "status": "Success",
+      "method": "Credit Card",
+      "transaction_id": "TXN1019",
+      "error_code": null
+    },
+
+    "shipping": {
+      "order_status": "Processing",
+      "tracking_number": null,
+      "estimated_delivery": "2026-06-08",
+      "delivery_date": null
+    },
+
+    "refund": {
+      "status": "Not Requested",
+      "reason": null,
+      "eligible": true
+    }
+  },
+
+  "ORD1020": {
+    "customer_name": "Tanya Bhatia",
+    "order_date": "2026-06-02",
+    "amount": 1999,
+
+    "payment": {
+      "status": "Success",
+      "method": "UPI",
+      "transaction_id": "TXN1020",
+      "error_code": null
+    },
+
+    "shipping": {
+      "order_status": "Delivered",
+      "tracking_number": "TRK9001020",
+      "estimated_delivery": "2026-06-08",
+      "delivery_date": "2026-06-07"
+    },
+
+    "refund": {
+      "status": "Completed",
+      "reason": "Product not as described",
+      "eligible": false
+    }
+  }
+}
