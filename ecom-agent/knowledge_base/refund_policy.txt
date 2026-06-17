@@ -1,0 +1,42 @@
+Refund Policy
+
+Customers may request a refund within 20 calendar days of the order date.
+
+Eligibility Requirements:
+
+* The order must have a successful payment status.
+* The product must have been delivered.
+* The item must be returned in its original condition unless it was damaged or defective upon arrival.
+
+Refund requests are eligible in the following cases:
+
+* Wrong item delivered.
+* Damaged product received.
+* Product received with missing components.
+* Product significantly different from the description.
+* Order delayed beyond 10 business days after the estimated delivery date.
+
+Refund requests may be rejected if:
+
+* More than 20 days have passed since the order date.
+* The item shows signs of misuse, alteration, or accidental damage caused by the customer.
+* The product belongs to a non-refundable category.
+* The customer cannot provide sufficient information regarding the issue.
+
+Refund Processing:
+
+* Once approved, refunds are initiated to the original payment method.
+* Credit Card refunds typically take 5-7 business days.
+* Debit Card refunds typically take 5-10 business days.
+* Net Banking refunds typically take 3-7 business days.
+* UPI refunds typically take 1-3 business days.
+
+Refund Status Definitions:
+
+* Not Requested: No refund request has been submitted.
+* Requested: Refund request has been received and is under review.
+* Approved: Refund request has been approved and is awaiting processing.
+* Completed: Refund has been successfully processed.
+* Rejected: Refund request did not meet eligibility requirements.
+
+Customers may contact support for clarification if a refund request is rejected.

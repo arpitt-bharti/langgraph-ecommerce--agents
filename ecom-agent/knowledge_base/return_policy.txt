@@ -1,0 +1,51 @@
+Return Policy
+
+Customers may initiate a return request within 15 calendar days of product delivery.
+
+Products are eligible for return in the following situations:
+
+* Wrong item delivered.
+* Damaged item received.
+* Defective product received.
+* Missing components or accessories.
+* Product significantly different from its description.
+
+Return Eligibility Requirements:
+
+* The product must be returned with all original accessories, manuals, and packaging whenever possible.
+* The product should not show signs of misuse, intentional damage, or unauthorized modification.
+* Proof of purchase or a valid order ID must be provided.
+
+Return requests may be rejected if:
+
+* The request is raised after 15 days from the delivery date.
+* The item has been physically damaged by the customer.
+* Essential parts, accessories, or packaging are missing without a valid reason.
+* The product belongs to a non-returnable category.
+
+Non-Returnable Categories:
+
+* Gift cards and digital products.
+* Personalized or custom-made products.
+* Perishable goods.
+* Hygiene-sensitive products that have been opened or used.
+
+Return Process:
+
+1. Customer submits a return request.
+2. Support team reviews the request.
+3. Return pickup is scheduled if approved.
+4. The product is inspected upon receipt.
+5. A replacement or refund is processed based on the inspection outcome.
+
+Return Status Definitions:
+
+* Not Requested: No return request has been submitted.
+* Requested: Return request received and awaiting review.
+* Approved: Return request approved and pickup scheduled.
+* In Transit: Product is being returned to the warehouse.
+* Received: Returned product received by the warehouse.
+* Rejected: Return request or inspection failed.
+* Completed: Return process successfully completed.
+
+Customers may contact support at any stage of the return process for updates or clarification.
