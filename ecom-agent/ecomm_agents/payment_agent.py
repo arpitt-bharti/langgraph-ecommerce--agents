@@ -7,7 +7,7 @@ load_dotenv(override=True)
 
 def paymentAgent(old_state : State) :
     original_user_query = old_state['messages'][0].content
-    worker_llm_w_tools = order_agent_tools.getOrderTools()
+    worker_llm_w_tools = order_agent_tools.get_order_llm_with_tools()
     PROMPT = f''' 
     You are a Payment Support Agent for an e-commerce platform.
 

@@ -6,7 +6,7 @@ load_dotenv(override=True)
 
 def refund_agent(old_state :  State) :
     original_user_query = old_state['messages'][0].content
-    refund_llm_with_tools = refund_agent_tools.getRefundTools()
+    refund_llm_with_tools = refund_agent_tools.get_refund_llm_tools()
     
     PROMPT = f''' 
     You are a Refund Support Agent for an e-commerce platform.

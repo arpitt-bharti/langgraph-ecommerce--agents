@@ -22,7 +22,8 @@ class State(TypedDict) :
 
 def classifierAgent(old_state : State) :
     PROMPT = f''' 
-    You are a classifier agent for an ecommerce platform. Your work is to analyze the incoming user queries and decide
+    You are a classifier agent for an ecommerce platform. 
+    Your work is to analyze the incoming user queries and decide
     the category which they belong to. Your response should be the category the query belongs to.
     Here's the user query - {old_state['messages'][0].content}
 
@@ -41,3 +42,6 @@ def classifierAgent(old_state : State) :
         'category' : response.category
     }
     
+    
+def classify_route(old_state : State) :
+    return 'order' if old_state['category']=='order' else 'refund' if old_state['category']=='refund' else 'payment' if old_state['category'] == 'payment' else 'human'

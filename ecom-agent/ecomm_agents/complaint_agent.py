@@ -1,14 +1,14 @@
 from langchain_core.messages import SystemMessage
 from state import State
 from dotenv import load_dotenv
-from ecomm_tools import human_agent_tools
+from ecomm_tools import complaint_agent_tools
 load_dotenv(override=True)
 
 
 def complaintAgent(old_state : State):
     
     orig_query = old_state['messages'][0].content
-    human_llm_with_tools = human_agent_tools.getHuman_Agent_tools()
+    complaint_llm_with_tools = complaint_agent_tools.get_complaint_llm_tools()
     PROMPT = f''' 
     You are a complaint handling agent for a e-commerece business. This is the user's original query :-
     \n {orig_query}
@@ -36,10 +36,12 @@ def complaintAgent(old_state : State):
     ONCE YOU GOT BACK THE TICKET_ID FROM THE TOOL, DO NOT RUN IT AGAIN.  
     '''
     
-    complaint_response = human_llm_with_tools.invoke(
+    complaint_response = complaint_llm_with_tools.invoke(
         input=[SystemMessage(content=PROMPT)]
     )
     
     return {
         'messages' : [complaint_response]
     }
+    
+
