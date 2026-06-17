@@ -1,167 +1,129 @@
-# E-Commerce Customer Support Agent (LangGraph)
+# E-Commerce Multi-Agent Support System
 
-## Overview
+An Agentic AI e-commerce customer support assistant built with LangGraph, LangChain, SQLite, and RAG.
 
-This project is an Agentic AI-powered customer support system for an e-commerce platform.
-
-The system routes customer queries to specialized support agents and uses tool calling with SQLite-backed data storage to provide accurate responses.
-
-Unlike traditional chatbots, the agent can perform actions such as checking order status, verifying refund eligibility, creating support tickets, and retrieving ticket details.
-
----
+It routes customer queries to specialized agents for orders, refunds, payments, and complaints.  
+The system uses SQLite for structured data like orders and tickets, and RAG for policy-based answers like refund and return rules.
 
 ## Features
 
-### Order Support Agent
-
-Handles order-related queries such as:
-
-* Where is my order?
-* Has my order been delivered?
-* What is my tracking information?
-
-Uses tool calling to fetch order information directly from SQLite.
-
----
-
-### Refund Support Agent
-
-Handles refund-related requests:
-
-* Is my order eligible for a refund?
-* Why was my refund rejected?
-* What is my refund status?
-
-Applies business rules and eligibility checks before responding.
-
----
-
-### Payment Support Agent
-
-Handles payment-related queries:
-
-* Why did my payment fail?
-* Was my payment successful?
-* Which payment method was used?
-
-Uses order data stored in SQLite.
-
----
-
-### Complaint Support Agent
-
-Handles customer complaints that cannot be resolved automatically.
-
-Examples:
-
-* Wrong item delivered
-* Empty package received
-* Damaged product
-* Missing items
-
-The agent can:
-
-* Create support tickets
-* Prevent duplicate ticket creation
-* Retrieve ticket details
-* Track ticket status
-
----
+- **Order Support Agent**: fetches order details from SQLite
+- **Refund Support Agent**: checks refund eligibility and uses RAG for policy context
+- **Payment Support Agent**: answers payment-related questions from order data
+- **Complaint Support Agent**: creates support tickets and retrieves ticket details
+- **Ticket deduplication**: prevents duplicate tickets for the same order/issue
+- **RAG integration**: policy documents are retrieved only when needed
+- **Modular architecture**: agents and tools are split into separate Python files
 
 ## Architecture
 
-User Query
-↓
-Classifier Agent
-↓
-├── Order Agent
-├── Refund Agent
-├── Payment Agent
-└── Complaint Agent
-↓
-Tools
-↓
-SQLite Databases
+User Query  
+→ Classifier Agent  
+→ Specialized Agent  
+→ Tool(s)  
+→ SQLite / RAG  
+→ Final Answer
 
----
+### Agents
 
-## Databases
+- `classifier_agent`
+- `order_agent`
+- `refund_agent`
+- `payment_agent`
+- `complaint_agent`
 
-### orders.db
+### Tools
 
-Stores:
+- `fetch_order_details`
+- `check_refund_eligibility`
+- `fetch_policy_tool`
+- `create_ticket_tool`
+- `get_ticket_tool`
 
-* Order Details
-* Payment Information
-* Shipping Information
-* Refund Information
+### Data Sources
 
-### tickets.db
+- `orders.db` for order, payment, and refund state
+- `tickets.db` for complaint tickets
+- policy documents for RAG retrieval
 
-Stores:
+## What the project can answer
 
-* Ticket ID
-* Order ID
-* Complaint Description
-* Ticket Status
-* Created Date
+### Order questions
+- Where is my order ORD1001?
+- Has ORD1018 been delivered?
+- What is the tracking number for ORD1008?
+- When will my order arrive?
 
----
+### Payment questions
+- Why did payment for ORD1004 fail?
+- Was my payment successful?
+- Which payment method was used?
+
+### Refund questions
+- Is ORD1005 eligible for a refund?
+- Why was my refund rejected?
+- What is your refund policy?
+- What are the refund eligibility rules?
+- Why is ORD1018 not refundable?
+
+### Complaint questions
+- I received the wrong item for ORD1019
+- My package arrived empty
+- I got a damaged product
+- What is the status of ticket TICKET1234?
+
+## Try these sample prompts
+
+- Where is my order ORD1008?
+- Why did payment for ORD1004 fail?
+- Is ORD1018 eligible for a refund?
+- Why is ORD1018 not refundable?
+- What is your refund policy?
+- I received the wrong item in order ORD1019
+- My package arrived empty for ORD1020
+- What is the status of ticket TICKET<your_ticket_id>?
 
 ## Tech Stack
 
-* Python
-* LangGraph
-* LangChain
-* OpenAI GPT Models
-* SQLite
-* Pydantic
-* Structured Tool Calling
+- Python
+- LangGraph
+- LangChain
+- OpenAI GPT models
+- SQLite
+- RAG with a vector retriever
+- Pydantic
+- Gradio
 
----
+## Why this project is useful
 
-## Example Queries
+This project demonstrates:
 
-### Order Tracking
+- multi-agent orchestration
+- structured tool calling
+- SQL-backed state
+- retrieval-augmented generation
+- complaint escalation workflows
+- ticket persistence and duplicate prevention
 
-Where is my order ORD1001?
+## Future improvements
 
-### Refund Eligibility
+- conversation memory
+- better ticket lifecycle management
+- ticket priority and assignment
+- FastAPI backend
+- evaluation suite
+- improved UI
+- deployment to Hugging Face Spaces
 
-Is ORD1005 eligible for a refund?
+## How to run
 
-### Payment Support
+1. Install dependencies
+2. Set up your `.env`
+3. Seed the SQLite databases
+4. Run `main.py`
 
-Why did payment for ORD1004 fail?
+## Notes
 
-### Complaint Handling
-
-I received the wrong item for ORD1019.
-
-### Ticket Tracking
-
-What is the status of ticket TICKET123?
-
----
-
-## Key Learning Outcomes
-
-* Agent Routing using LangGraph
-* Tool Calling
-* Structured Outputs
-* Multi-Agent Architectures
-* SQLite Integration
-* Stateful Workflows
-* Ticket Lifecycle Management
-* Customer Support Automation
-
----
-
-## Future Improvements
-
-* Conversation Memory
-* FastAPI Backend
-* Human-in-the-loop Approval Flows
-* Ticket Priority Management
-* Agent Evaluation Framework
-* PostgreSQL Migration
+- Orders are stored in SQLite instead of mock JSON at runtime
+- Refund policy answers use RAG for policy context
+- Complaint flow creates and retrieves support tickets
